@@ -1,8 +1,64 @@
+@font-face {
+  font-family: "Upheaval"; /*Can be any text*/
+  src: local("upheavtt"), url("./fonts/upheavtt.ttf") format("truetype");
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  width: 700px;
+
+  padding-top: 30px;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.21);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+* {
+  font-family: "Upheaval";
+}
+
+.card {
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 15em;
+  height: 20em;
+  background: white;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
 .item-info {
   display: flex;
   flex-direction: column;
 }
 
-.item-info img{
+.item-info img {
   max-width: 50px;
+  justify-content: center;
+  align-self: center;
 }
