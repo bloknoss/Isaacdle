@@ -1,0 +1,8 @@
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info img{
+  max-width: 50px;
+}
