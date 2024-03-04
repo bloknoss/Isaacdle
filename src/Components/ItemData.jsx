@@ -44,7 +44,7 @@ export default function ItemData({ guess, real }) {
       <div
         style={{
           backgroundColor: getColor(guess.transformations, real.transformations),
-        }}
+        }} 
         className="square"
       >
         <span>{guess.transformations}</span>
