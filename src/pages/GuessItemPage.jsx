@@ -1,8 +1,38 @@
-import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
-import ItemData from "./ItemData";
+import { useEffect, useState, useRef } from "react";
+import "../styles/GuessItemPage.css";
+import ItemData from "../components/ItemData";
 
-export default function SearchForm() {
+function ScrollTopContainer({ item, data, itemComponents }) {
+  const containerRef = useRef(null); // Step 1: Create a ref
+
+  const refreshScroll = () => {
+    const container = containerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollTop - container.scrollHeight; // Scroll to the top
+    }
+  };
+
+  useEffect(() => {
+    refreshScroll(); // Step 2: Call this function whenever data changes
+  }, [data, itemComponents]); // Depend on data and itemComponents
+
+  return (
+    <div className="container" style={{}}>
+      {data && <>{data.name === item.name ? <h1 style={{ color: "green" }}>Right Guess!!</h1> : <h1 style={{ color: "red" }}>Wrong Guess!!</h1>}</>}
+      <div onChangeCapture={refreshScroll} ref={containerRef} className="squarebox-container">
+        {data && (
+          <>
+            {itemComponents.map((data, index) => (
+              <ItemData key={index} guess={data.guess} real={data.real} />
+            ))}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function GuessItemPage() {
   const [items, setItems] = useState([]);
   const [formValue, setFormValue] = useState({ itemName: "" });
   const [itemComponents, setItemComponents] = useState([]);
@@ -64,9 +94,13 @@ export default function SearchForm() {
     setItemComponents((prev) => [...prev, newItemData]);
   };
 
+  const refreshScroll = (e) => {
+    console.log(e);
+    console.log("x");
+  };
+
   return (
     <>
-      <img className="logo" src={logo} alt="" />
       <div className="container" style={{ overflow: "hidden", height: "80px" }}>
         <div style={{ textWrap: "wrap", display: "flex", flexDirection: "column" }}>
           <label htmlFor="itemName">Item Name</label>
@@ -88,19 +122,7 @@ export default function SearchForm() {
         </div>
       </div>
 
-      <div className="container" style={{ height: "200px" }}>
-        <div className="squarebox-container">
-          {data && (
-            <>
-              {data.name === item.name ? <h1 style={{ color: "green" }}>Right Guess!!</h1> : <h1 style={{ color: "red" }}>Wrong Guess!!</h1>}
-
-              {itemComponents.map((data, index) => (
-                <ItemData key={index} guess={data.guess} real={data.real} />
-              ))}
-            </>
-          )}
-        </div>
-      </div>
+      {data && <ScrollTopContainer item={item} data={data} itemComponents={itemComponents} />}
     </>
   );
 }

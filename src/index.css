@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  width: 700px;
+  padding-top: 30px;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.21);
+}

@@ -1,0 +1,111 @@
+label {
+  margin-bottom: 15px;
+}
+
+.suggestions-list {
+  background-color: #e9dadf;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  margin-top: 35px;
+  align-items: center;
+  height: 24rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  width: 28vw;
+  scroll-behavior: smooth;
+  padding-top: 15px;
+  padding-top: 0px;
+  position: absolute;
+  transition-duration: 1s;
+  padding-left: 0px;
+}
+
+.suggestions-list > li {
+  cursor: pointer;
+  display: flex;
+  vertical-align: middle;
+  border-bottom: 1px solid brown;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.suggestions-list > li:hover {
+  cursor: pointer;
+}
+.suggestions-list > li > img {
+  margin-left: 15px;
+}
+.suggestions-list > li > span {
+  position: relative;
+  line-height: 32px;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 40%;
+  text-wrap: nowrap;
+  text-align: center;
+}
+
+form > input[type="image"] {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  width: 50px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 1);
+  transition-duration: 0.3s;
+}
+
+form {
+  display: flex;
+  padding: 0px;
+  gap: 15px;
+}
+
+form input[type="text"] {
+  height: auto;
+  width: 100vw;
+  font-size: 1rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  border-image: url("../assets/border.png") 15 fill round;
+}
+
+form input[type="image"] {
+  width: 40px;
+}
+
+form > input[type="image"]:hover {
+  transform: translateY(5px);
+}
+
+.squarebox-container {
+  height: auto;
+  overflow: auto;
+  padding: 25px;
+  padding-top: 0px;
+  margin-top: 0px;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 25px;
+}
+
+.squarebox-container img {
+  max-width: 50px;
+  justify-content: center;
+  align-self: center;
+}
+
+.suggestions-list::-webkit-scrollbar,
+.squarebox-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb,
+.squarebox-container::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #888;
+}

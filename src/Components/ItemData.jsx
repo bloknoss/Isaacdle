@@ -1,4 +1,4 @@
-import "../styles/squarebox.css";
+import "../styles/SquareBox.css";
 
 function getColor(guess, real) {
   guess = String(guess);
@@ -9,8 +9,9 @@ function getColor(guess, real) {
 
 function Images({ guess }) {
   return guess.pools[0] != "None" ? (
-    guess.pools_images.map((img) => (
+    guess.pools_images.map((img, index) => (
       <div
+        key={index}
         style={{
           display: "flex",
           textAlign: "center",
@@ -34,33 +35,21 @@ export default function ItemData({ guess, real }) {
       <div className="square">
         <img src={guess.image} alt="" />
       </div>
-      <div
-        style={{ backgroundColor: getColor(guess.type, real.type) }}
-        className="square"
-      >
+      <div style={{ backgroundColor: getColor(guess.type, real.type) }} className="square">
         <span>{guess.type}</span>
       </div>
-      <div
-        style={{ backgroundColor: getColor(guess.tier, real.tier) }}
-        className="square"
-      >
+      <div style={{ backgroundColor: getColor(guess.tier, real.tier) }} className="square">
         <span>{guess.tier}</span>
       </div>
       <div
         style={{
-          backgroundColor: getColor(
-            guess.transformations,
-            real.transformations
-          ),
+          backgroundColor: getColor(guess.transformations, real.transformations),
         }}
         className="square"
       >
         <span>{guess.transformations}</span>
       </div>
-      <div
-        style={{ backgroundColor: getColor(guess.pools, real.pools) }}
-        className="square"
-      >
+      <div style={{ backgroundColor: getColor(guess.pools, real.pools) }} className="square">
         <div style={{ alignItems: "center", textAlign: "center", top: "50%" }}>
           <Images guess={guess}></Images>
         </div>

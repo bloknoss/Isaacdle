@@ -1,0 +1,33 @@
+.menu {
+  margin-top: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-image: url("../assets/home_menu.png") fill 0;
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.links > h1 {
+  padding-right: 20px;
+}
+
+.links > .link {
+  display: inline-block;
+  color: #463a3c;
+  font-size: 1.75em;
+  padding-right: 1em;
+}
