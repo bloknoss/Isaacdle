@@ -4,7 +4,9 @@ body {
   background-image: url("./assets/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  background-size: 100vw contain;
+  
+  overflow-x: hidden;
 }
 
 .logo {
@@ -17,6 +19,6 @@ body {
   transition: transform 0.2s;
 }
 
-.logo:hover {
+.logo:hover img {
   transform: scale(1.21);
 }

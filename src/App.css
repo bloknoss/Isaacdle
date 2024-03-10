@@ -1,28 +1,43 @@
 * {
-    font-family: "Upheaval";
+  font-family: "Upheaval";
 }
 
 @font-face {
-    font-family: "Upheaval";
-    src: local("upheavtt"), url("./fonts/upheavtt.ttf") format("truetype");
+  font-family: "Upheaval";
+  src: local("upheavtt"), url("./fonts/upheavtt.ttf") format("truetype");
+}
+
+.megaphone {
+  position: absolute;
+  width: 100px;
+  left: 90%;
+  top: 10%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.megaphone:hover {
+  transform: scale(1.5);
 }
 
 .container {
-    margin-top: 50px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    overflow: auto;
-    width: 50vw;
-    border: 1em solid;
-    background-clip: content-box;
-    background-color: rgb(171, 126, 105);
-    border-image: url("./assets/border.png") 30 fill round;
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    max-height: 15vw;
-    flex-direction: column;
-    text-wrap: wrap;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  overflow: auto;
+  width: 50vw;
+  max-width: 100vw;
+  max-height: 90vw;
+  border: 1em solid;
+  background-clip: content-box;
+  background-color: rgb(171, 126, 105);
+  border-image: url("./assets/border.png") 30 fill round;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-direction: column;
+  text-wrap: wrap;
+  margin-bottom: 50px !important;
 }
