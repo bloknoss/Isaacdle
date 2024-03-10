@@ -1,27 +1,28 @@
 * {
-  font-family: "Upheaval";
+    font-family: "Upheaval";
 }
 
 @font-face {
-  font-family: "Upheaval";
-  src: local("upheavtt"), url("./fonts/upheavtt.ttf") format("truetype");
+    font-family: "Upheaval";
+    src: local("upheavtt"), url("./fonts/upheavtt.ttf") format("truetype");
 }
 
 .container {
-  margin-top: 50px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  overflow: auto;
-  width: 30vw;
-  border: 1em solid;
-  background-clip: content-box;
-  background-color: rgb(171, 126, 105);
-  border-image: url("./assets/border.png") 30 fill round;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  max-height: 15vw;
-  flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    overflow: auto;
+    width: 50vw;
+    border: 1em solid;
+    background-clip: content-box;
+    background-color: rgb(171, 126, 105);
+    border-image: url("./assets/border.png") 30 fill round;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    max-height: 15vw;
+    flex-direction: column;
+    text-wrap: wrap;
 }
