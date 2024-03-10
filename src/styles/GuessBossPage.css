@@ -2,13 +2,11 @@
     width: 40vh;
     height: 40vh;
     border: solid;
-    border-radius: 15%;
-    border-image: url("../assets/Fondo.png") 15 fill;
+    border-image: url("../assets/border.png") 15 fill round;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     display: flex;
-    margin-right: 12%;
 }
 
 .imagenBoss {
