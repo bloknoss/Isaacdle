@@ -1,71 +1,71 @@
 .square-container {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
 }
 
 .square {
-  justify-content: center;
-  vertical-align: middle;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  text-wrap: pretty;
-  overflow: auto;
-  overflow: hidden;
-  border-radius: 5px;
-  border: 2px solid grey;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-wrap: pretty;
+    overflow: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid grey;
 }
 
 .square {
-  opacity: 0;
-  font-size: 1.2vmin;
-  animation: fadeIn 0.5s forwards;
+    opacity: 0;
+    font-size: 1.2vmin;
+    animation: fadeIn 0.5s forwards;
 }
 
 .square > * {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .square:nth-child(1) {
-  animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 .square:nth-child(2) {
-  animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 .square:nth-child(3) {
-  animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 
 .square:nth-child(4) {
-  animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 .square:nth-child(5) {
-  animation-delay: 2.5s;
+    animation-delay: 2.5s;
 }
 
 .square:nth-child(6) {
-  animation-delay: 3s;
+    animation-delay: 3s;
 }
 
 .square:nth-child(7) {
-  animation-delay: 3.5s;
+    animation-delay: 3.5s;
 }
